@@ -1,20 +1,18 @@
-$(function () {
-    $('#typo .inner')
-    .css('top', '-100px')
-    .on('click', function(){
-        $('#typo .inner').animate({
-            top: '100px'
+$(document).ready(function () {
+    $('#typo').on('mouseover',function(){
+        $('#typo').stop(true).animate({
+            backgroundColor: '#ae5e9b'
         },
-        15000,
-        'swing',
-        function(){
-            $('#typo .inner')
-            .animate({top: '-100px'},3000);
-        }
-    );
-    
-});
-
+        10000
+        );
+    })
+    .on('mouseout', function(){
+        $('#typo').stop(true).animate({
+            backgroundColor: '#3498db'
+        },
+        500
+        );
+    });
 });
 
 
